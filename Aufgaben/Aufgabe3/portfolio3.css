@@ -88,11 +88,11 @@ h2{
     position: absolute;
     top: 205px;
     left: 610px;
+    opacity: 0.7;
 }
 
 .icon:hover{
-    background-color: rgb(219, 185, 255);
-    border-radius: 8px;
+    opacity: 0.9;
 }
 
 .foto {
