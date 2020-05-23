@@ -1,0 +1,64 @@
+body{
+    background-image: url(bilder/station2/bg.png);
+    font-family: sans-serif;
+    display: block;
+}
+
+#back2home{
+    text-decoration: none;
+    color: rgb(21, 58, 95);
+    background-color: rgb(155, 205,255);
+    padding: 5px 10px;
+    border-radius: 50px;
+    position: relative;
+    top: 15px;
+    left: 5px;
+}
+
+#back2home:hover{
+    background-color: rgb(126, 187, 248);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 150px;
+}
+
+img[alt="shell1"]{
+    display: block;
+    position: absolute;
+    top: 220px;
+    margin-left: 100px;
+}
+
+img[alt="shell2"]{
+    display: block;
+    position: absolute;
+    top: 220px;
+    margin-left: 400px;
+}
+
+img[alt="shell3"]{
+    display: block;
+    position: absolute;
+    top: 130px;
+    margin-left: 250px;
+}
+
+.offen{
+    opacity: 0;
+}
+
+.offen:hover{
+    opacity: 1;
+}
+
+.text{
+    color: white;
+    display: block;
+    position: absolute;
+    top: 50px;
+}

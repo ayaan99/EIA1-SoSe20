@@ -1,0 +1,41 @@
+html{
+    font-family: sans-serif;
+    width: 800px;
+    background-color:rgb(234, 245, 255);
+    margin: auto;
+}
+
+.header{
+    text-align: center;
+    color: rgb(21, 58, 95);
+    background-color: rgb(112, 184, 255);
+    border-radius: 50px;
+    font-size: 50px;
+    font-weight: normal;
+    position: relative;
+    top: 20px;
+    padding: 5px;
+    margin-bottom: 60px;
+}
+
+.station{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(21, 58,95);
+    background-color: rgb(155, 205, 255);
+    width: 400px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 20px;
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    left: 150px;
+}
+
+.station:hover{
+    background-color: rgb(126, 187, 248);
+}
+
+
+

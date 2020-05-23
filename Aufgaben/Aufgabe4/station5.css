@@ -1,0 +1,62 @@
+body{
+    background-image: url(bilder/station5/bg\ \(1\).png);
+    font-family: sans-serif;
+    font-size: 14px;
+    display: block;
+}
+
+#back2home{
+    text-decoration: none;
+    color: rgb(21, 58, 95);
+    background-color: rgb(155, 205,255);
+    padding: 5px 10px;
+    border-radius: 50px;
+    position: relative;
+    top: 15px;
+    left: 5px;
+}
+
+#back2home:hover{
+    background-color: rgb(126, 187, 248);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 150px;
+}
+
+h1{
+    display: block;
+    position: absolute;
+    top: 20px;
+    margin-left: -140px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.spalte1{
+    display: flex;
+    width: 500px;
+    position: absolute;
+    top: 90px;
+    margin-left: -20px;
+    color: rgb(255, 232, 232);
+}
+
+.spalte2{
+    display: flex;
+    width: 500px;
+    position: absolute;
+    top: 220px;
+    margin-left: -20px;
+    color: rgb(255, 232, 232);
+}
+
+p{
+    margin: 10px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
