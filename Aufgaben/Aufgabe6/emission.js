@@ -22,7 +22,6 @@ window.addEventListener("load", function () {
         var africaV = 100 - africaVer;
         var africaVKg = Math.round(africa18 - africa08);
         document.querySelector(".africaPNG").addEventListener("click", function () {
-            console.log(1);
             document.querySelector("h1").innerHTML = "CO2-Emissionen von Afrika";
             document.querySelector(".emission18").innerHTML = africa18 + " kg";
             document.querySelector(".continent18").innerHTML = "Absolute Emission von Afrika";
