@@ -1,5 +1,4 @@
 "use strict";
-// tslint:disable: typedef
 var africa08 = 1028;
 var southamerica08 = 1132.6;
 var europe08 = 4965.7;
