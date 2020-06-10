@@ -1,4 +1,3 @@
-
 var africa08: number = 1028;
 var southamerica08: number = 1132.6;
 var europe08: number = 4965.7;

@@ -1,4 +1,3 @@
-"use strict";
 //Emissionen 2018
 var africa18 = 1235.5;
 var southamerica18 = 1261.5;
