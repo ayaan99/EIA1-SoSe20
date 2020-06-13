@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    display: block;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+button{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#btn1, #btn2, #btn3{
+    background-color: #5255ff;
+    border-color: #5255ff;
+}
+
+#btn4, #btn5, #btn6, #btn7{
+    background-color: #ff59c6;
+    border-color: #ff59c6;
+}
+
+#btn8, #btn9{
+    background-color: #ffce59;
+    border-color: #ffce59;
+}
