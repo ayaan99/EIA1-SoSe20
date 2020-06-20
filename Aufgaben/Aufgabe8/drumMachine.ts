@@ -43,7 +43,7 @@ function playBeat(): void {
         sound.play();
         index += 1;
 
-        if(index > 2) {
+        if(index > beat.length) {
             index = 0;
         }
     }
