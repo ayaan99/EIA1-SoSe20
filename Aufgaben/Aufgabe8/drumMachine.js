@@ -37,6 +37,7 @@ document.querySelector("#btn9").addEventListener("click", function () {
 var beat = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 //PLAY BUTTON:
 function playBeat() {
+    var loop;
     var index = 0;
     function startBeat() {
         var sound = new Audio(beat[index]);

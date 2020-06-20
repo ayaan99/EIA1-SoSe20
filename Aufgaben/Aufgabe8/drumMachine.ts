@@ -36,6 +36,7 @@ var beat: string [] = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 //PLAY BUTTON:
 function playBeat(): void {
 
+    var loop: number;
     var index: number = 0;
 
     function startBeat(): void {
