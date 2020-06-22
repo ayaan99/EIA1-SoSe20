@@ -1,7 +1,8 @@
 // tslint:disable: typedef
+// tslint:disable: no-use-before-declare
 
 function playSample(btn: string): void { 
-    if(recording == true) {
+    if (recording == true) {
         beat.push(btn);
     }
 
@@ -36,7 +37,6 @@ var beat: string [] = ["kick.mp3", "snare.mp3", "hihat.mp3"];
 //PLAY BUTTON:
 function playBeat(): void {
 
-    var loop: number;
     var index: number = 0;
 
     function startBeat(): void {
@@ -44,7 +44,7 @@ function playBeat(): void {
         sound.play();
         index += 1;
 
-        if(index > beat.length) {
+        if (index > beat.length) {
             index = 0;
         }
     }
@@ -61,7 +61,7 @@ function playBeat(): void {
 
 var playBtn: HTMLElement = document.querySelector("#playBtn");
 
-playBtn.addEventListener("click", function(){
+playBtn.addEventListener("click", function() {
     playBeat();
 });
 
@@ -70,7 +70,7 @@ var recording: boolean = false;
 var recordBtn: HTMLElement = document.querySelector("#recordBtn");
 
 function recordBeat(): void {
-    if(recording == false){
+    if (recording == false) {
         recording = true;
         recordBtn.setAttribute("class", "fas fa-stop-circle");
     } else {
@@ -84,6 +84,6 @@ recordBtn.addEventListener("click", function() {
 });
 
 //DELETE BUTTON:
-document.querySelector("#deleteBtn").addEventListener("click", function (){
+document.querySelector("#deleteBtn").addEventListener("click", function () {
     beat = [];
-})
+});
