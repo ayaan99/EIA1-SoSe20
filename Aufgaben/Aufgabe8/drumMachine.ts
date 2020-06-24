@@ -48,7 +48,7 @@ function playBeat(): void {
             index = 0;
         }
     }
-
+    
     if (playBtn.getAttribute("class") == "fas fa-play-circle") {
         playBtn.setAttribute("class", "fas fa-pause-circle");
         loop = setInterval(startBeat, 500);
