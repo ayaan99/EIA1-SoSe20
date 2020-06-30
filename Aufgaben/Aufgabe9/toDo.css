@@ -1,0 +1,56 @@
+body{
+    font-family: sans-serif;
+    color: rgb(44, 78, 122);
+    text-align: center;
+    margin-top: 100px;
+    background-image: url(cloud.jpg);
+}
+
+.header{
+    font-size: 45px;
+}
+
+.counter{
+    font-size: 25px;
+}
+
+.textField{
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.addBtn{
+    color: white;
+    background-color: rgb(175, 216, 255);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.addBtn:hover{
+    background-color: rgb(133, 177, 219);
+}
+
+.listElement{
+    display: block;
+    font-size: 23px;
+    font-weight: 600;
+    color: rgb(44, 78, 122);
+    padding: 10px;
+}
+
+#trash{
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#trash:hover{
+    color: rgb(133, 177, 219);
+}
