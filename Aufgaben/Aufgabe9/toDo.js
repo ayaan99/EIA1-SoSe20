@@ -1,4 +1,5 @@
 // tslint:disable: typedef
+//@Hannah: Danke für die Hilfestellung :)
 console.log("test");
 var toDoList = ["einkaufen", "EIA Aufgabe", "weinen"];
 function makeList() {
@@ -9,18 +10,12 @@ function makeList() {
     }
     var count = document.querySelector(".counter");
     count.innerHTML = toDoList.length + " in total";
-    function deleteElement() {
-        var deleteBtn = document.querySelector("#trash");
-        var i;
-        for (var i_1 = 0; i_1 < deleteBtn.length; i_1++) {
-            deleteBtn[i_1].addEventListener("click", function () {
-                var div = this.parentElement;
-                div.style.display = "none";
-                console.log("click");
-            });
-            deleteElement();
-        }
-    }
+    document.querySelector("#trash").addEventListener("click", function () {
+        console.log("click");
+        var index = 0;
+        toDoList.splice(index, 1);
+        makeList();
+    });
 }
 makeList();
 var textField = document.querySelector(".textField");

@@ -1,5 +1,7 @@
 // tslint:disable: typedef
 
+//@Hannah: Danke für die Hilfestellung :)
+
 console.log("test");
 
 let toDoList: string[] = ["einkaufen", "EIA Aufgabe", "weinen"];
@@ -13,21 +15,13 @@ function makeList(): void {
 
     var count: HTMLElement = document.querySelector(".counter");
     count.innerHTML = toDoList.length + " in total";
-
-    function deleteElement(): void {
-        var deleteBtn: HTMLElement = document.querySelector("#trash");
-        var i;
     
-        for (let i = 0; i < deleteBtn.length; i++) {
-        deleteBtn[i].addEventListener("click", function(): void {
-            var div = this.parentElement;
-            div.style.display = "none";
-            console.log("click");
-        });
-        
-        deleteElement();
-    }}
-    
+    document.querySelector("#trash").addEventListener("click", function(): void {
+        console.log("click");
+        var index: number = 0;
+        toDoList.splice( index, 1);
+        makeList();
+    });
 }
 
 makeList();
