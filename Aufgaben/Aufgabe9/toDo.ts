@@ -21,7 +21,7 @@ function makeList(): void {
         var index: number = 0;
         toDoList.splice( index, 1);
         makeList();
-    });
+    }); //tasks können nur nach einander gelöscht werden
 }
 
 makeList();

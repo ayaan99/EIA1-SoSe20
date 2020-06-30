@@ -15,7 +15,7 @@ function makeList() {
         var index = 0;
         toDoList.splice(index, 1);
         makeList();
-    });
+    }); //tasks können nur nach einander gelöscht werden
 }
 makeList();
 var textField = document.querySelector(".textField");
