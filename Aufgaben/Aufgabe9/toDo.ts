@@ -36,7 +36,7 @@ addBtn.addEventListener("click", function(): void {
     textField.value = "";
 });
 
-function deleteTask(index: 0): void {
+function deleteTask(index: number): void {
 
     toDoList.splice(index, 1);
 
