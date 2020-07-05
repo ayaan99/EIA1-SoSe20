@@ -1,4 +1,4 @@
-//Hilfestellung durch Markus im Praktikum
+//Hilfestellung von Markus und Hannah im Praktikum
 
 interface Todo  {
     text: string;

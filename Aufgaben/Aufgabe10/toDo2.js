@@ -1,4 +1,4 @@
-//Hilfestellung durch Markus im Praktikum
+//Hilfestellung von Markus und Hannah im Praktikum
 var todos = [
     { text: "einkaufen", isChecked: true },
     { text: "EIA Aufgabe", isChecked: false },
