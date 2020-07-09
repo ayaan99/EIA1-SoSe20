@@ -49,7 +49,7 @@ function playBeat() {
     }
     if (playBtn.getAttribute("class") == "fas fa-play-circle") {
         playBtn.setAttribute("class", "fas fa-pause-circle");
-        loop = setInterval(startBeat, 500);
+        var loop = setInterval(startBeat, 500);
     }
     else {
         playBtn.setAttribute("class", "fas fa-play-circle");
