@@ -1,4 +1,5 @@
-//Hilfestellung von Markus und Hannah im Praktikum
+// tslint:disable: no-any
+//Hilfestellung von Rebecca und Markus im Praktikum
 var todos = [
     { text: "einkaufen", isChecked: true },
     { text: "EIA Aufgabe", isChecked: false },
@@ -75,4 +76,34 @@ function deleteTodo(index) {
     todos.splice(index, 1);
     drawListToDOM();
 }
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    artyom.addCommands({
+        indexes: ["Erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            todos.unshift({
+                text: wildcard,
+                isChecked: false
+            });
+            drawListToDOM();
+        }
+    });
+    function startContinuousArtyom() {
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
+    }
+    startContinuousArtyom();
+});
 //# sourceMappingURL=toDo2.js.map
