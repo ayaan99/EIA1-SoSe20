@@ -36,13 +36,13 @@ extrem.addEventListener("click", function () {
 }); //Aufruf der Funktion zum Spielstart mit der Schwierigkeitsstufe "Extrem"
 //Funktionen zum Spielstart:
 function gameStartLeicht() {
-    //Wertzuweisung für Variablen, damit diese zu jedem Spielstart neu zugewiesen werden:
+    //bei jedem Spielstart neue Wertzuweisung für Variablen:
     gewonnen = false; //-> damit man bei Spielstart noch nicht gewonnen hat
-    tonfolge = []; //-> damit leeres Array bei Spielstart mit zufällig generierten Werten aus der for-Schleife       gefüllt wird
+    tonfolge = []; //-> leeres Array, weil noch keine Tonfolge generiert wurde
     spielerTonfolge = []; //-> leeres Array bei Spielstart, weil noch keine Nutzerinteraktion passiert ist
     aufleuchten = 0; //-> Index damit beim ersten Wert aus der Tonfolge der entsprechende Button aufleuchten soll
     intervalId = 0; //-> Index um das Interval später wieder zu löschen
-    runde = 1; //-> weil es zu Spielstart die erste Runde ist
+    runde = 1; //-> erste Runde bei Spielstart
     richtig = true; //-> weil noch kein Button falsch geklickt wurde 
     level = 0; //-> damit die Schwierigkeitsgrade auseinandergehalten werden (relevant für Gewinnen-Bedingung)
     //Schleife damit die zufälligen Werte in das Tonfolge-Array gepusht werden:
@@ -106,7 +106,7 @@ function spielrunde() {
     start = false; //-> damit man während dem Aufleuchten nicht auf die Buttons klicken kann
     //Wenn Anzahl des Aufleuchtens der Spielrundenlänge entspricht..
     if (aufleuchten == runde) { //(also die Spielrunde beendet ist)
-        clearInterval(intervalId); //..dann soll das Interval gelöscht werden (das Aufleuchten wird also gestoppt)
+        clearInterval(intervalId); //..dann soll das Interval gelöscht werden (das Aufleuchten wird gestoppt)
         computerRunde = false; //-> der Computer spielt keine weiteren Töne mehr
         stopAufleuchten(); // Funktionsaufruf damit alle Buttons in ihrer ursprünglichen Farbe erscheinen
         start = true; //-> die Buttons können nun vom Spieler geklickt werden
@@ -132,8 +132,8 @@ function spielrunde() {
             if (tonfolge[aufleuchten] == 5) { //Wenn der erste Wert im Tonfolgen-Array gleich 5 ist..
                 button5();
             } //..dann soll der 5. Button einen Ton abspielen & aufleuchten
-            //Der Index "aufleuchten" wird inkremiert:
-            aufleuchten++; //damit wird das Leuchten beim Durchlaufen des Intervals kurz unterbrochen, bevor ein weiterer Button aufleuchtet
+            //Der Index "aufleuchten" wird inkrementiert:
+            aufleuchten++; //damit die nächstem Stellen im Array den Buttons zugewiesen werden können
         }, 200); //nach 200ms soll ein Button einen Ton abspielen und aufleuchten
     }
 }
@@ -178,7 +178,7 @@ function button5() {
     töne = true;
     btn5.style.backgroundColor = "rgb(255, 167, 117)";
 }
-//Funktion damit alle Buttons normal sind, wenn das Spiel beginnt oder verloren wurde:
+//Funktion damit alle Buttons ihre ursprüngliche Farbe haben, wenn das Spiel beginnt oder verloren wurde:
 function stopAufleuchten() {
     btn1.style.backgroundColor = "rgb(91, 207, 211)";
     btn2.style.backgroundColor = "rgb(91, 207, 211)";
@@ -202,7 +202,7 @@ btn1.addEventListener("click", function () {
         button1(); //Funktionsaufruf damit der Button einen Ton spielt, wenn er geklickt wurde
         if (!gewonnen) { //Wenn man noch nicht gewonnen hat..
             setTimeout(function () {
-                stopAufleuchten(); //..bei dem die Farben der Buttons nach 300ms wieder auf normal gesetzt werden
+                stopAufleuchten(); //..damit die Buttons nach 300ms wieder normal aussehen
             }, 300);
         }
     }
@@ -259,7 +259,7 @@ btn5.addEventListener("click", function () {
 function vergleichen() {
     //wenn die Spieler-Tonfolge nicht der generierten Tonfolge entspricht:
     if (spielerTonfolge[spielerTonfolge.length - 1] !== tonfolge[spielerTonfolge.length - 1]) {
-        //("[spielerTonfolge.lengt - 1" ist der letzte Wert der geklickt wurde)
+        //("[spielerTonfolge.lengt - 1]" ist der letzte Wert der geklickt wurde)
         richtig = false; //..dann wurde nicht richtig geklickt
         spielVerloren(); //und Funktion für verlorenes Spiel wird aufgerufen
     }
@@ -297,7 +297,7 @@ function vergleichen() {
     //Wenn die Spielrundenlänge und die gespielte Tonfolge gleich sind, alles richtig geklickt wurde und man noch nicht gewonnen hat..
     if (runde == spielerTonfolge.length && richtig && !gewonnen) {
         runde++; //..dann soll die nächste runde beginnen
-        spielerTonfolge = []; //..die Spieler-Tonfolge soll gelöscht werden, damit die neuen Werte der nächsten Runde wieder gespeichert werden
+        spielerTonfolge = []; //..die Spieler-Tonfolge soll gelöscht werden, damit die neuen Werte in der nächsten Runde wieder gespeichert werden
         computerRunde = true; //..der Computer soll die Tonfolge abspielen
         aufleuchten = 0; //..beim ersten Wert aus der Tonfolge soll der entsprechende Button aufleuchten
         intervalId = setInterval(spielrunde, 800); //alle 800ms soll Funktion 'spielrunde' ausgeführt werden 
